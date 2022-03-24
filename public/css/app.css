@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans';
     margin: 0;
     background-color: #f2f2f2;
+    font-family: "Open Sans", sans-serif;
 }
 
 .wrapper{
@@ -85,3 +87,49 @@ label{
 .form-control{
     min-width: 200px;
 }
+.grid-container { 
+    display: flex;
+    justify-content: center;
+}
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Aankomende-toernooien Snitch Snitch"
+      "totale-teams Snitch Snitch"
+      ". . .";
+    
+    text-align: center;
+    min-width: 100%;
+    
+  }
+  
+  .Aankomende-toernooien { 
+    grid-area: Aankomende-toernooien;  
+    border: 2px solid #D3A625;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+  .totale-teams { 
+    grid-area: totale-teams;  
+    border: 2px solid #D3A625;
+    border-radius: 10px;
+    font-size: 25px;
+}
+  
+  .Snitch { grid-area: Snitch; 
+    background: url(/img/snitch.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 2px solid #D3A625;
+    border-radius: 10px;
+    
+}
+
+
+  
